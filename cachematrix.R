@@ -39,7 +39,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Takes the return of the makeCacheMatrix as input and return the inverse 
 ## of the matrix. If the a cached version exists it returns it otherwise it
-## calculates the inverse and stores for future uses.
+## calculates the inverse and stores for future uses. If messOn is set to 
+## false no messages will be printed about if the returned inversion was 
+## calculated or gotten from cache.
 cacheSolve <- function(x, ..., messOn = TRUE) {
   ## Return a matrix that is the inverse of 'x'
   inv <- x$getinverse()
